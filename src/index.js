@@ -28,31 +28,28 @@
 //   document.getElementById("root")
 // );
 
+// import React from "react";
+// import ReactDom from "react-dom";
+// import App from "./components-greetingapp/App";
+
+// ReactDom.render(<App />, document.getElementById("root"));
+
+// import React from "react";
+// import ReactDom from "react-dom";
+// import App from "./Components-listapp/app";
+
+// ReactDom.render(<App />, document.getElementById("root"));
+
 import React from "react";
 import ReactDom from "react-dom";
-
-const date = new Date();
-var currentTime = date.getHours();
-
-console.log(currentTime);
-
-let greeting;
-let rang;
-
-if (currentTime < 12) {
-  greeting = "Good Morning";
-  rang = "green";
-} else if (currentTime < 18) {
-  greeting = "Good Afternoon";
-  rang = "yellow";
-} else {
-  greeting = "Good night";
-  rang = "brown";
-}
+import * as Calc from "./components-calculator/Calculator";
 
 ReactDom.render(
-  <h1 className="heading" style={{ color: rang }}>
-    {greeting}
-  </h1>,
+  <ul>
+    <li>{Calc.Add(7, 5)}</li>
+    <li>{Calc.Subtract(7, 5)}</li>
+    <li>{Calc.Multiply(7, 5)}</li>
+    <li>{Calc.Subtract(7, 5)}</li>
+  </ul>,
   document.getElementById("root")
 );
